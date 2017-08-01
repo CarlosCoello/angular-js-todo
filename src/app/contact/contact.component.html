@@ -1,0 +1,41 @@
+<div class="container">
+  <form novalidate #f="ngForm" (ngSubmit)="onSubmit()">
+    <div class="form-group has-feedback" [ngClass]="{
+      'has-success': name?.valid && (name?.dirty || name?.touched),
+      'has-error': name?.invalid && (name?.dirty || name?.touched)
+    }">
+      <input type="text" class="form-control" name="name" [(ngModel)]="model.name" placeholder="Name" required #name="ngModel">
+      <div class="form-control-feedback" style="position:relative; width: 100%; text-align:left; top: 0;" *ngIf="name.errors && (name.dirty || name.touched)">
+        <p *ngIf="name.errors.required">Name is required</p>
+      </div>
+    </div>
+    <div class="form-group has-feedback" [ngClass]="{
+      'has-success': email?.valid && (email?.dirty || email?.touched),
+      'has-error': email?.invalid && (email?.dirty || email?.touched)
+    }">
+      <input type="email" class="form-control" name="email" [(ngModel)]="model.email" placeholder="Email" required pattern="[^ @]*@[^ @]*" #email="ngModel">
+      <div class="form-control-feedback" style="position:relative; width: 100%; text-align:left; top: 0;" *ngIf="email.errors && (email.dirty || email.touched)">
+        <p *ngIf="email.errors.required">Email is required</p>
+        <p *ngIf="email.errors.pattern">Email must contain at least the @ character</p>
+      </div>
+      <br>
+      <pre>Dirty? {{f.form.controls.email?.dirty}}</pre>
+      <pre>Pristine? {{f.form.controls.email?.pristine}}</pre>
+      <pre>Touched? {{f.form.controls.email?.touched}}</pre>
+      <pre>UnTouched? {{f.form.controls.email?.untouched}}</pre>
+      <pre>Valid? {{f.form.controls.email?.valid}}</pre>
+      <pre>InValid? {{f.form.controls.email?.invalid}}</pre>
+    </div>
+    <div class="form-group has-feedback" [ngClass]="{
+      'has-success': message?.valid && (message?.dirty || message?.touched),
+      'has-error': message?.invalid && (message?.dirty || message?.touched)
+    }">
+      <textarea name="message" class="form-control" [(ngModel)]="model.message" rows="8" cols="80" placeholder="Type Message" required #message="ngModel"></textarea>
+      <div class="form-control-feedback" style="position:relative; width: 100%; text-align:left; top: 0;" *ngIf="message.errors && (message.dirty || message.touched)">
+        <p *ngIf="message.errors.required">Message is required</p>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-default" [disabled]="f.invalid">Submit</button>
+    <pre> {{ f.value | json }} </pre>
+  </form><!-- form -->
+</div><!-- .container -->

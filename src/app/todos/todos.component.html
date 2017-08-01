@@ -1,0 +1,39 @@
+<div class="container">
+  <section class="todo-forms">
+    <div *ngIf="!editInProcess" class="add-todo">
+      <header>
+        <h2>Add your TODO LIST Below:</h2>
+      </header>
+      <form novalidate #f="ngForm" (ngSubmit)="addToList()">
+        <input type="text" class="form-control" [(ngModel)]="todo" name="task" placeholder="Enter TODO">
+        <button type="submit" class="btn btn-success">Add TODO</button>
+      </form>
+    </div><!-- .add-todo -->
+
+    <div *ngIf="editInProcess" class="edit-todo">
+      <header>
+        <h2>Edit and Update your TODO LIST Below:</h2>
+      </header>
+      <form novalidate #f="ngForm" (ngSubmit)="updateTodo(todoObj)">
+        <input type="text" class="form-control" [(ngModel)]="todoEdit" name="taskedit">
+        <button type="submit" class="btn btn-success">Update TODO</button>
+        <button type="submit" class="btn btn-primary" (click)="goBack()">Add TODO</button>
+      </form>
+    </div><!-- .edit-todo -->
+  </section><!-- .todo-forms -->
+
+  <br>
+  <section class="todo-list">
+    <header>
+      <h3>Current TODO LIST</h3>
+    </header>
+    <br>
+    <ul>
+      <li *ngFor="let todo of todos" class="well well-sm" style="list-style: none;font-size: 16px;">
+          {{ todo.todo }}
+        <button type="button" class="btn btn-primary" (click)="editTodoItem(todo)">Edit</button>
+        <button type="button" class="btn btn-danger" (click)="deleteTodoItem(todo)">Delete</button>
+      </li>
+     </ul>
+  </section><!-- .todo-list -->
+</div>
