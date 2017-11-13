@@ -286,7 +286,7 @@ exports = module.exports = __webpack_require__(23)();
 
 
 // module
-exports.push([module.i, ".container {\n  width: 100%;\n}\n\n.navbar-brand {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  font-size: 22px;\n}\n\n.navbar-default .navbar-nav li a {\n  font-size: 16px;\n}\n", ""]);
+exports.push([module.i, ".container {\n  width: 100%;\n}\n\n.navbar-brand {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  font-size: 22px;\n}\n\n.navbar-nav li a {\n  font-size: 16px;\n  color: #fff;\n}\n", ""]);
 
 // exports
 
@@ -353,7 +353,7 @@ module.exports = module.exports.toString();
 /***/ 289:
 /***/ (function(module, exports) {
 
-module.exports = "<header>\n    <nav class=\"navbar navbar-expand-lg navbar-light bg-light\">\n        <div class=\"container\">\n          <a class=\"navbar-brand\" [routerLink]=\"['/']\">TODO Web app</a>\n          <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n            <span class=\"navbar-toggler-icon\"></span>\n          </button>\n      \n          <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n            <ul class=\"navbar-nav mr-auto\">\n              <li routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{exact:true}\"><a [routerLink]=\"['/']\">Home</a></li>\n              <li routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{exact:true}\"><a [routerLink]=\"['todos']\">Todos List</a></li>\n              <li routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{exact:true}\"><a [routerLink]=\"['contact']\">Contact</a></li>\n            </ul>\n          </div>\n        </div>\n      </nav>\n</header><!-- header -->\n\n<router-outlet></router-outlet>\n\n<footer>\n  <div class=\"footer container\">\n    <header>\n      <h2>Angular JS 2 TODO APP</h2>\n    </header>\n  </div>\n</footer>\n\n"
+module.exports = "<header>\n    <nav class=\"navbar navbar-expand-lg navbar-light bg-light\">\n        <div class=\"container\">\n          <a class=\"navbar-brand\" [routerLink]=\"['/']\">TODO Web app</a>\n          <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n            <span class=\"navbar-toggler-icon\"></span>\n          </button>\n      \n          <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n            <ul class=\"navbar-nav mr-auto\">\n              <li class=\"mx-2\" routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{exact:true}\"><a [routerLink]=\"['/']\">Home</a></li>\n              <li class=\"mx-2\" routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{exact:true}\"><a [routerLink]=\"['todos']\">Todos List</a></li>\n              <li class=\"mx-2\" routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{exact:true}\"><a [routerLink]=\"['contact']\">Contact</a></li>\n            </ul>\n          </div>\n        </div>\n      </nav>\n</header><!-- header -->\n\n<router-outlet></router-outlet>\n\n<footer>\n  <div class=\"footer container\">\n    <header>\n      <h2>Angular JS 2 TODO APP</h2>\n    </header>\n  </div>\n</footer>\n\n"
 
 /***/ }),
 
