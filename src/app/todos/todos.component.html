@@ -28,8 +28,8 @@
       <h3>Current TODO LIST</h3>
     </header>
     <br>
-    <ul>
-      <li *ngFor="let todo of todos" class="well well-sm" style="list-style: none;font-size: 16px;">
+    <ul class="list-group">
+      <li *ngFor="let todo of todos" class="list-group-item" style="list-style: none;font-size: 16px;">
           {{ todo.todo }}
         <button type="button" class="btn btn-primary" (click)="editTodoItem(todo)">Edit</button>
         <button type="button" class="btn btn-danger" (click)="deleteTodoItem(todo)">Delete</button>
